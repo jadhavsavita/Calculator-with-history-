@@ -63,6 +63,7 @@
     </div>
     <div id="history">
         <h1><center>History</center></h1>
+        <button id="clear-history" onclick="clearHistory()">Clear History</button>
     </div>
     <script type="text/javascript">
         // declaring variables screen and btn
@@ -134,6 +135,12 @@
         //code for backspace
         function backspc(){
         screen.value=screen.value.substr(0,screen.value.length-1);
+        }
+
+        // Clear History
+        function clearHistory() {
+        history.innerHTML = `<h1><center>History</center></h1>
+        <button id="clear-history" onclick="clearHistory()">Clear History</button>`;
         }
         
     </script>
